@@ -20,3 +20,30 @@
   # 4
   # I am car, I have 4
   #  wheels
+class Vehicle
+  def show
+      puts "enter num of wheels"
+      a=Integer(gets)
+  end
+end
+
+class Bike<Vehicle
+
+  def b
+    show
+    puts "I am bike, I have 2 wheels"
+  end
+end
+
+class Car<Vehicle
+
+  def c
+    show
+    puts "I am car, I have 4 wheels"
+  end
+end
+
+bb=Bike.new
+bb.b
+cc=Car.new
+cc.c

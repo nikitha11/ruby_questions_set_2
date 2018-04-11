@@ -24,8 +24,7 @@ class Message
 		puts "This is a Messaging app"
 	end
 
-	# define sendPersonalMessage which calls the personalChat()
-
+	
 	def groupChat(message)
 		puts "This is a Public Group"
 		puts message
@@ -52,10 +51,12 @@ class User < Message
 		puts "Welcome User"
 	end
 
+	private
 	def sendSecureMessage
 		secureChat("This is confidential")
 	end
 
+	public
 	def sendPersonalMessage
 		personalChat("Hi, how are you?")
 	end
@@ -64,4 +65,7 @@ end
 
 
 client = User.new
+client.groupChat("hi friends")
+client.sendPersonalMessage
+ client.sendSecureMessage
 
